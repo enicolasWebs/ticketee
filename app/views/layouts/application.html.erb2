@@ -2,9 +2,7 @@
 <html>
 <head>
   <title>
-    <% if content_for?(:title) %>
-     <%= yield(:title) %>
-    <% else %>
+    <% if content_for?(:title) %><%= yield(:title).chop %><% else %>
       Ticketee
     <% end %>
   </title>

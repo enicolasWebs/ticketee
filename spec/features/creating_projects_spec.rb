@@ -11,5 +11,11 @@ RSpec.feature "Creating Projects" do
     click_button "Create Project"
 
     expect(page).to have_content("Project has been created.")
+    
+    project = Project.find_by(name: "Sublime Text 3")
+    expect(page.current_url).to eql(project_url(project))
+
+    title = /\sSublime Text 3 - Project - Ticketee\s/
+    expect(page).to have_title(title)
   end
 end
