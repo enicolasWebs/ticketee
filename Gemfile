@@ -32,6 +32,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use Bootstrap for styling views
+gem "bootstrap-sass", "~> 3.3"
+
+# Use Font Awesome for enhanced styling
+gem "font-awesome-rails", "~> 4.2"
+
+# Use Simple form for enhaced styling of forms
+gem "simple_form", "3.1.0"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
