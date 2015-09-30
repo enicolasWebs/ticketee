@@ -7,7 +7,7 @@ RSpec.feature "Editing Projects" do
         sublime = FactoryGirl.create(:project, name: "Sublime Text 3")
 
         login_as(user)
-        assign_role!(user, :viewer, sublime)
+        assign_role!(user, :manager, sublime)
 
         visit "/"
         
