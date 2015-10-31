@@ -17,7 +17,7 @@ Rails.application.routes.draw do
      resources :tickets
   end
 
-  resources :assets, only: [:show], path: :files
+  resources :assets, only: [:show, :new], path: :files
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
