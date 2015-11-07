@@ -10,3 +10,13 @@ blockquote.comment p {
     display: inline-block;
     padding-right: 5px;
 }
+
+.state {
+    @extend .label;
+    font-size: 12px;
+    padding: 0.3em 0.6em;
+}
+
+#tickets li {
+    padding-bottom: 10px;
+}
