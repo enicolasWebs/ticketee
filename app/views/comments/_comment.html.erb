@@ -1,4 +1,5 @@
 <blockquote class="comment">
+    <%= state_transition_for(comment) %>
     <%= simple_format(comment.text) %>
     <footer>
         <%= time_ago_in_words(comment.created_at) %> ago by <cite><%= comment.author %></cite>

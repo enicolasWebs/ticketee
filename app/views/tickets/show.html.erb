@@ -24,11 +24,8 @@
 
     <%  if @ticket.state.present? %>
         <div class="page-header">
-            <tr>
-                <th>State:</th>
-                <td><%= render @ticket.state %></td>
-                A
-            </tr>
+            <h4>State:</h4>
+            <span><%= render @ticket.state %></span>
         </div>
     <% end %>
 
