@@ -39,4 +39,16 @@
             <% end %>
         </div>
     <% end %>
+
+    <div id="comments">
+        <% if @ticket.comments.select(&:persisted?).any? %>
+            <%= render @ticket.comments.select(&:persisted?) %>
+        <% else %>
+            <p>There are no comments for this ticket.</p>
+        <% end %>
+    </div>
+    
+    <% if policy(@comment).create? %>
+        <%= render "comments/form", ticket: @ticket, comment: @comment %>
+    <% end %>
 </div>
