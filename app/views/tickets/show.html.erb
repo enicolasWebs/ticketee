@@ -22,6 +22,16 @@
         </ul>
     </div>
 
+    <%  if @ticket.state.present? %>
+        <div class="page-header">
+            <tr>
+                <th>State:</th>
+                <td><%= render @ticket.state %></td>
+                A
+            </tr>
+        </div>
+    <% end %>
+
     <p id="author">
         Created by <%= @ticket.author.email %>, <%= time_ago_in_words(@ticket.created_at) %> ago
     </p>

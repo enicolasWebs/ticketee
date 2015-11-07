@@ -32,7 +32,7 @@ class ProjectsController < ApplicationController
     end
 
     def set_project
-        @id_param = params.permit(:id)
+        @id_param = params.permit(:id, :utf8, :_method, :authenticity_token, :commit, project: [:name, :description])
         @project = Project.find(@id_param[:id])
 
         rescue ActiveRecord::RecordNotFound
