@@ -19,5 +19,8 @@
 # Ignore swp files
 *.swp
 
+#Ignore swn files
+*.swn
+
 # Ignore local upload files
 uploads
