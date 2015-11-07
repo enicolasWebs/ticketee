@@ -22,5 +22,8 @@
 #Ignore swn files
 *.swn
 
+#Ignore swo files
+*.swo
+
 # Ignore local upload files
 uploads
