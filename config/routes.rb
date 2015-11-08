@@ -5,8 +5,11 @@ Rails.application.routes.draw do
 
     resources :projects, only: [:new, :create, :destroy]
     resources :users
-    resources :states, only: [:index, :new, :create, :edit, :update, :destroy]
-
+    resources :states, only: [:index, :new, :create, :edit, :update, :destroy] do
+        member do
+            get :make_default
+        end
+    end
   end
 
   devise_for :users, controllers: {
