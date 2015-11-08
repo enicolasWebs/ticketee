@@ -6,6 +6,14 @@ class Ticket < ActiveRecord::Base
     has_many :comments, dependent: :destroy
     accepts_nested_attributes_for :assets, reject_if: :all_blank
 
+    before_create :assign_default_state
+
     validates :title, presence: true
     validates :description, presence: true, length: { minimum: 10 }
+
+    private
+
+        def assign_default_state
+            self.state ||= State.default
+        end
 end
