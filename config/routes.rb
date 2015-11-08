@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
     resources :projects, only: [:new, :create, :destroy]
     resources :users
+    resources :states, only: [:index, :new, :create, :edit, :update, :destroy]
+
   end
 
   devise_for :users, controllers: {
@@ -20,7 +22,6 @@ Rails.application.routes.draw do
   resources :tickets, only: [] do
       resources :comments, only: [:create]
   end
-
   resources :assets, only: [:show, :new], path: :files
 
   # The priority is based upon order of creation: first created -> highest priority.

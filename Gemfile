@@ -68,8 +68,9 @@ end
 group :test do
     gem "capybara", "~> 2.4"
     gem "factory_girl_rails", "~> 4.5"
-    gem "selenium-webdriver", "~> 2.45.0"
+    gem "selenium-webdriver", "~> 2.47.1"
     gem "chromedriver-helper", "~> 1.0.0"
     gem "database_cleaner", "~> 1.4.0"
+    gem "color", "~> 1.4.1"
 end
 
