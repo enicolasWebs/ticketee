@@ -18,7 +18,9 @@ class Comment < ActiveRecord::Base
         end
 
         def set_ticket_state
-            ticket.state = state
-            ticket.save!
+            if state
+                ticket.state = state
+                ticket.save!
+            end
         end
 end

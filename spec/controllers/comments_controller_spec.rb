@@ -4,6 +4,7 @@ RSpec.describe CommentsController, :type => :controller do
     let(:user) { FactoryGirl.create(:user) }
     let(:project) { Project.create!(name: "Ticketee", description: "Test Description") }
     let(:state) { State.create!(name: "Hacked") }
+    let!(:defaultState) { State.create!(name: "Default State", default: true) }
 
     let(:ticket) do
         project.tickets.create(title: "State transitions",
@@ -17,12 +18,14 @@ RSpec.describe CommentsController, :type => :controller do
     end
 
     it "cannot transition a state by passing through state_id" do
+        expect(ticket.state).to eq(defaultState)
+
         post :create, { comment: { text: "Did I hack it ??",
                                    state_id: state.id },
                         ticket_id: ticket.id }
 
         ticket.reload
 
-        expect(ticket.state).to be_nil
+        expect(ticket.state).to eq(defaultState)
     end
 end
