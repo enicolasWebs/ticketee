@@ -6,9 +6,32 @@ blockquote.comment p {
     font-size: 14px;
 }
 
-.page-header h4 {
-    display: inline-block;
-    padding-right: 5px;
+.page-header {
+
+    h2 {
+        display: inline-block;
+        padding-right: 10px;
+    }
+
+    h3, .state {
+        display: inline-block;
+        font-weight: 300;
+        font-size: 22px;
+    }
+
+    .state {
+        font-weight: 400;
+    }
+
+    h3.page-sub-header {
+        font-size: 26px;
+        font-weight: 400;
+    }
+    
+    h4 {
+        display: inline-block;
+        padding-right: 5px;
+    }
 }
 
 .state {
@@ -19,4 +42,21 @@ blockquote.comment p {
 
 #tickets li {
     padding-bottom: 10px;
+}
+
+.tag {
+    @extend .state;
+    @extend .label-info;
+    margin-right: 10px;
+
+    a {
+        color: white;
+
+        &.remove {
+            font-family: "FontAwesome";
+            @extend .fa-close;
+            margin-right: 0.5em;
+            text-decoration: none;
+        }
+    }
 }

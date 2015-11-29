@@ -6,10 +6,29 @@
 
 .page-header, header {
     position: relative;
-    padding-bottom: 0px;
+
+    margin: 10px 0 10px;
 
     &:first-child {
         margin-top: 20px;
+    }
+}
+
+.page-header {
+    height: 63px;
+
+    ul.actions {
+        top: 0;
+        right: 0;
+        display: table;
+        height: 100%;
+        margin: 0;
+        border-spacing: 4px;
+
+        li {
+            display: table-cell;
+            vertical-align: middle;
+        }
     }
 }
 

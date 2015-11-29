@@ -1,6 +1,7 @@
 <%= simple_form_for [project, ticket] do |f| %>
     <%= f.input :title %>
     <%= f.input :description %>
+    <%= render "tags/form", f: f %>
     <div id="assets">
         <h3>Supporting Files</h3>
         <%= render partial: "assets/form", locals: { f: f, index: 0 } %>

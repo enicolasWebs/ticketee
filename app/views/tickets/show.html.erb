@@ -1,10 +1,12 @@
 <div id="ticket">
     <div class="page-header">
-        <h1><%= @project.name %></h1>
+        <h2>Project:</h2>
+        <h3 class="page-sub-header"><%= @project.name %></h3>
     </div>
 
     <div class="page-header">
-        <h2><%= @ticket.title %></h2>
+        <h2>Ticket:</h2>
+        <h3 id="title" class="page-sub-header"><%= @ticket.title %></h3>
 
         <ul class="actions">
             <% if policy(@ticket).update? %>
@@ -22,16 +24,29 @@
         </ul>
     </div>
 
+    <div class="page-header">
+        <h2>Author:</h2>
+        <h3 id="author"><%= @ticket.author.email %></h3>
+    </div>
+
+    <div class="page-header">
+        <h2>Created:</h2>
+        <h3><%= time_ago_in_words(@ticket.created_at) %> ago</h3>
+    </div>
+
     <%  if @ticket.state.present? %>
         <div class="page-header">
-            <h4>State:</h4>
-            <span><%= render @ticket.state %></span>
+            <h2>State:</h2>
+            <%= render @ticket.state %>
         </div>
     <% end %>
 
-    <p id="author">
-        Created by <%= @ticket.author.email %>, <%= time_ago_in_words(@ticket.created_at) %> ago
-    </p>
+    <% if @ticket.tags.any? %>
+        <div id="tags" class="page-header">
+            <h2>Tags:</h2>
+            <h3><%= render @ticket.tags, ticket: @ticket %></h3>
+        </div>
+    <% end %>
 
     <%= simple_format(@ticket.description) %>
 

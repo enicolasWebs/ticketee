@@ -18,7 +18,7 @@ RSpec.feature "Editing tickets" do
     
         expect(page).to have_content "Ticket has been updated."
 
-        within("#ticket h2") do
+        within("#ticket #title") do
             expect(page).to have_content("Make it really shiny!")
         end
 

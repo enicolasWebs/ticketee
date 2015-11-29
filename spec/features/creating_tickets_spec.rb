@@ -7,7 +7,7 @@ RSpec.feature "Creating Tickets" do
     before do
         login_as(user)
         project = FactoryGirl.create(:project, name: "Internet Explorer")
-        assign_role!(user, :editor, project)
+        assign_role!(user, :manager, project)
 
         visit "/"
         click_link "Internet Explorer"
@@ -23,7 +23,7 @@ RSpec.feature "Creating Tickets" do
         expect(page).to have_content("State: New")
 
         within("#ticket #author") do
-            expect(page).to have_content("Created by #{user.email}")
+            expect(page).to have_content("#{user.email}")
         end
     end
 
@@ -35,7 +35,7 @@ RSpec.feature "Creating Tickets" do
         expect(page).to have_content("Description can't be blank")
     end
 
-    scenario "with invalid description" do
+    scenario "with an invalid description" do
         fill_in "Title", with: "Non-standards compliance"
         fill_in "Description", with: "It sucks"
         click_button "Create Ticket"
@@ -73,6 +73,18 @@ RSpec.feature "Creating Tickets" do
 
         within("#ticket .assets") do
             expect(page).to have_content("speed.txt")
+        end
+    end
+
+    scenario "with associated tags" do
+        fill_in "Title", with: "Non-standards compliance"
+        fill_in "Description", with: "My pages are ugly!"
+        fill_in "Tags", with: "browser,visual"
+        click_button "Create Ticket"
+        expect(page).to have_content("Ticket has been created.")
+        within("#ticket #tags") do
+            expect(page).to have_content("browser")
+            expect(page).to have_content("visual")
         end
     end
 end
