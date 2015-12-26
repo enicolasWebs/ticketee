@@ -52,6 +52,9 @@ gem "pundit", "~> 0.3.0"
 # Use CarrierWave for file uploading funtionality
 gem "carrierwave", "~> 0.10.0"
 
+# Use Searcher for searching functionality
+gem "searcher", github: "radar/searcher"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
