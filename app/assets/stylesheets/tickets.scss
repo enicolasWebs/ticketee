@@ -60,3 +60,48 @@ blockquote.comment p {
         }
     }
 }
+
+div#watchers {
+    height: auto;
+
+    h2 {
+        display: table-cell;
+        height: 42px;
+        vertical-align: middle;
+    }
+
+    .actions {
+        height: 42px;
+    }
+}
+
+.watch, .unwatch {
+    @extend .btn;
+    font-weight: bold;
+    font-size: 18px;
+
+    &:before {
+        font-family: "FontAwesome";
+        padding-right: 0.5em;
+    }
+}
+
+.watch {
+    @extend .btn-success;
+
+    &:before {
+        @extend .fa-eye;
+    }
+}
+
+.unwatch {
+    @extend .btn-danger;
+
+    &:before {
+        @extend .fa-eye-slash;
+    }
+}
+
+.watcher-emails {
+    text-align: right;
+}

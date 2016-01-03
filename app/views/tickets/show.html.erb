@@ -34,6 +34,18 @@
         <h3><%= time_ago_in_words(@ticket.created_at) %> ago</h3>
     </div>
 
+    <div class="page-header" id="watchers">
+        <h2>Watchers:</h2>
+        <ul class="actions">
+            <li><%= toggle_watching_button(@ticket) %></li>
+        </ul>
+        <% @ticket.watchers.each do |watcher| %>
+            <div class="watcher-emails">
+                <%= watcher.email.to_s %>
+            </div>
+        <% end %>
+    </div>
+
     <%  if @ticket.state.present? %>
         <div class="page-header">
             <h2>State:</h2>
