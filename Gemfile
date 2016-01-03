@@ -75,5 +75,6 @@ group :test do
     gem "chromedriver-helper", "~> 1.0.0"
     gem "database_cleaner", "~> 1.4.0"
     gem "color", "~> 1.4.1"
+    gem "email_spec", "~> 1.6.0"
 end
 
