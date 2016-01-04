@@ -76,4 +76,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Production URL: https://whispering-mesa-7051.herokuapp.com
+  # Heroku GIT URL: https://git.heroku.com/whispering-mesa-7051.git
 end

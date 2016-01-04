@@ -52,6 +52,9 @@ gem "pundit", "~> 0.3.0"
 # Use CarrierWave for file uploading funtionality
 gem "carrierwave", "~> 0.10.0"
 
+# Use Fog for uploading to AWS's S3
+gem 'fog', '~> 1.16.0'
+
 # Use Searcher for searching functionality
 gem "searcher", github: "radar/searcher"
 
