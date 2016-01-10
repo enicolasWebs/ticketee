@@ -98,5 +98,6 @@ RSpec.configure do |config|
 end
 
 Capybara.register_driver :selenium do |app|
-    Capybara::Selenium::Driver.new(app, browser: :chrome)
+    args = ['no-sandbox' ]
+    Capybara::Selenium::Driver.new(app, :browser => :chrome, :args => args)
 end
