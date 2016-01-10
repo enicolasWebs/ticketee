@@ -2,9 +2,6 @@ language: ruby
 rvm: 2.2.0
 script: "bin/rake spec"
 before_script:
-  - "echo ${HOME}/.gem/ruby/2.2.0/gems | xargs ls"
-  - "printenv"
-  - "echo ${GEM_HOME}/gems/chromedriver-helper-1.0.0/bin/chromedriver-update | xargs bundle exec ruby"
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start" 
   - sleep 3 # give xvfb time to start
