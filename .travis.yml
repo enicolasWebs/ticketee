@@ -2,7 +2,7 @@ language: ruby
 rvm: 2.2.0
 script: "bin/rake spec"
 before_install:
-  - "echo 'deb http://ppa.launchpad.net/pali/test/ubuntu' | sudo tee -a /etc/apt/sources.list >/dev/null"
+  - "echo 'deb http://ppa.launchpad.net/pali/test/ubuntu precise main' | sudo tee -a /etc/apt/sources.list >/dev/null"
   - "echo 'deb-src http://ppa.launchpad.net/pali/test/ubuntu precise main' | sudo tee -a /etc/apt/sources.list >/dev/null"
   - "sudo cat /etc/apt/sources.list"
   - "sudo apt-get install chromium-browser=47.0.2526.73-0"
