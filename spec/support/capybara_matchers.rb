@@ -4,4 +4,6 @@ module CapybaraMatchers
     end
 end
 
-Capybara::Session.include(CapybaraMatchers)
+self.class.class_eval do
+    Capybara::Session.include(CapybaraMatchers)
+end
