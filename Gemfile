@@ -13,6 +13,9 @@ gem 'pg',       group: :production
 # Use rails_12factor for logging & static assets
 gem 'rails_12factor', group: :production
 
+# Use dpl for deployment from Travis (only needed to not trigger installation in Travis CI environment)
+gem 'dpl', group: :production
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

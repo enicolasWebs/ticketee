@@ -94,6 +94,7 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    dpl (1.8.11)
     email_spec (1.6.0)
       launchy (~> 2.1)
       mail (~> 2.2)
@@ -264,6 +265,7 @@ DEPENDENCIES
   color (~> 1.4.1)
   database_cleaner (~> 1.4.0)
   devise (~> 3.4.1)
+  dpl
   email_spec (~> 1.6.0)
   factory_girl_rails (~> 4.5)
   fog (~> 1.16.0)
