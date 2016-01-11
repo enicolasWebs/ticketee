@@ -2,8 +2,15 @@ language: ruby
 sudo: required
 dist: trusty
 rvm: 2.2.0
-script: "bin/rake spec"
+script: bin/rake spec
 before_install:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start" 
-  - sleep 3 # give xvfb time to start
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- sleep 3
+deploy:
+  provider: heroku
+  api_key:
+    secure: issFbZQkQ7B8PjGdZHXbZPWlgHwKg5IvmJVqdT5mYkBVQer+YwpdkdqimmiwqF+QFCTX9LTKQmRom3hOinJvznrQBTFVFuVzYrfeoLDTFnYFUAjtNHxbqf8IC3pkeS1/wAx/yds+ROpL8EhG1V2/ziKvNKZnn2n1ttZWUcP/RGRCA0r5P+8T41KaNlkR66yXrL+Oc6X4I4XzTsB57qKvnaQFfTtxd+kpWuMiNNGmF7tE/1lcvawGokQ+nD9WdhfeH/KCcU6MTOEVkiyCPEwiMxX4KIdEZSZPlAvG3vlTHM0YU06rX00ZPGA3ufn1kYf8KZF27C4Di8PlE/mqGhHAF4UDFlws+BHSyH2DKrWZLnHO6v+BnAkBwvZeOOOPVcAcHX0ApvmoCHsc3VqsIcfcXsuWzrdBSLx1MBUAoOLgTRqTRJb3viONGD+glaHA5y+snODxE8DqceyqCZ4nSsmTRu8UxPB1cl6Lrqvlrr7zrcYW8iCG/hVxacKDA++xS6xJmUZEiG1GdePehHp9bZ53vBYggTweRbmRjSqm6BcLxpwsnmzfr125Y/lsF3eyvRS/kBNBPesdgXduzYK7XIPpjguEWDxFOzXeN/5CfeWzH5PC+PRfifP2QTX9lDD6dyL2qnPMrvBVSZZIoqkciHEjzilEhhqis66+DtvwWpoxoNA=
+  app: whispering-mesa-7051
+  on:
+    repo: enicolasWebs/ticketee
