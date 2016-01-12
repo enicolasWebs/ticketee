@@ -1,3 +1,4 @@
+require 'puma/capistrano'
 require 'bundler/capistrano'
 
 set :user, 'vagrant'

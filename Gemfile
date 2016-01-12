@@ -72,6 +72,10 @@ gem "searcher", github: "radar/searcher"
 # Use Capistrano for handling deployments to servers (non-Heroku)
 gem 'capistrano', '~> 2.15.5'
 
+gem 'sprockets', '~> 2.11.3'
+
+gem 'puma'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
