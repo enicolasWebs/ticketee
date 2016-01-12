@@ -30,3 +30,6 @@
 
 # Ignore local upload files
 uploads
+
+# Ignore .vagrant
+.vagrant

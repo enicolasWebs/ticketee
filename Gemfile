@@ -5,10 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 
 # Use sqlite3 as the database for Active Record for the development & test environments
-gem 'sqlite3',  group: [:development, :test]
+gem 'sqlite3'
 
 # Use postgres as the database for Active Record for the production environment
-gem 'pg',       group: :production
+# gem 'pg',       group: :production
 
 # Use rails_12factor for logging & static assets
 gem 'rails_12factor', group: :production
@@ -68,6 +68,9 @@ gem 'fog', '~> 1.16.0'
 
 # Use Searcher for searching functionality
 gem "searcher", github: "radar/searcher"
+
+# Use Capistrano for handling deployments to servers (non-Heroku)
+gem 'capistrano', '~> 2.15.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
