@@ -159,6 +159,7 @@ GEM
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
+    puma (2.15.3)
     pundit (0.3.0)
       activesupport (>= 3.0.0)
     rack (1.6.4)
@@ -286,6 +287,7 @@ DEPENDENCIES
   font-awesome-rails (~> 4.2)
   jbuilder (~> 2.0)
   jquery-rails
+  puma
   pundit (~> 0.3.0)
   rails (= 4.2.1)
   rails_12factor
