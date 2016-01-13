@@ -34,4 +34,4 @@ uploads
 # Ignore .vagrant
 .vagrant
 
-/config/database.yml
+/config/database.yml 
