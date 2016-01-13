@@ -4,6 +4,7 @@ require 'rvm/capistrano'
 
 set :user, 'vagrant'
 set :use_sudo, false
+set :bundle_without, [:development, :test, :production]
 
 set :application, "ticketee"
 set :repository,  "https://github.com/enicolasWebs/ticketee.git"
