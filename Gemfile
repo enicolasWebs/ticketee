@@ -64,10 +64,12 @@ gem "pundit", "~> 0.3.0"
 gem "carrierwave", "~> 0.10.0"
 
 # Use Fog for uploading to AWS's S3
-gem 'fog', '~> 1.16.0'
+gem 'fog'
 
 # Use Searcher for searching functionality
 gem "searcher", github: "radar/searcher"
+
+gem 'rvm-capistrano'
 
 # Use Capistrano for handling deployments to servers (non-Heroku)
 gem 'capistrano', '~> 2.15.5'
@@ -75,8 +77,6 @@ gem 'capistrano', '~> 2.15.5'
 gem 'sprockets', '~> 2.11.3'
 
 gem 'puma'
-
-gem 'rvm-capistrano'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
