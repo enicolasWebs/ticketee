@@ -33,3 +33,5 @@ uploads
 
 # Ignore .vagrant
 .vagrant
+
+database.yml
