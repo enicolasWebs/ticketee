@@ -1,5 +1,6 @@
 require 'bundler/capistrano'
 require 'puma/capistrano' 
+require 'rvm/capistrano'
 
 set :user, 'vagrant'
 set :use_sudo, false
