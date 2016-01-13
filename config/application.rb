@@ -27,5 +27,11 @@ module Ticketee
     config.autoload_paths += %W(#{config.root}/app/uploaders)
 
     config.assets.manifest = "public/assets/.sprockets-manifest.json"
+
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif,
+    "fontawesome-webfont.ttf",
+    "fontawesome-webfont.eot",
+    "fontawesome-webfont.svg",
+    "fontawesome-webfont.woff")
   end
 end
