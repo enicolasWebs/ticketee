@@ -5,7 +5,7 @@ set :user, 'vagrant'
 set :use_sudo, false
 
 set :application, "ticketee"
-set :repository,  "https://github.com/steveklabnik/ticketee.git"
+set :repository,  "https://github.com/enicolas/ticketee.git"
 
 set :ssh_options, {port: 2222,
                                       keys: ['~/.vagrant.d/insecure_private_key']}
