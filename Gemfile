@@ -5,8 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 
 # Use sqlite3 as the database for Active Record for the development & test environments
-
-# gem 'sqlite3', group: [:test, :development, :vagrant_production]
+gem 'sqlite3', group: [:test, :development, :vagrant_production]
 
 # Use postgres as the database for Active Record for the production environment
 gem 'pg',       group: :production
