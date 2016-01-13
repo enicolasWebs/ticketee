@@ -14,6 +14,7 @@ set :ssh_options, {port: 2222,
 set :deploy_to, "/home/#{user}/#{application}"
 
 set :deploy_via, :remote_cache
+set :rails_env, 'vagrant_production'
 
 server "localhost", :app, :web, :db, :primary => true
 
