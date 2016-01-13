@@ -69,6 +69,8 @@ gem 'fog'
 # Use Searcher for searching functionality
 gem "searcher", github: "radar/searcher"
 
+gem 'figaro'
+
 gem 'rvm-capistrano'
 
 # Use Capistrano for handling deployments to servers (non-Heroku)
