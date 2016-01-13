@@ -19,6 +19,6 @@ server "localhost", :app, :web, :db, :primary => true
 before "deploy:assets:precompile", "preconfigure"
 task :preconfigure, :roles => :db do
       run("cd #{release_path} && 
-              RAILS_ENV=production bundle exec rake db:migrate")
+              RAILS_ENV=vagrant_production bundle exec rake db:migrate")
 end
 
