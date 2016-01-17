@@ -28,10 +28,13 @@ module Ticketee
 
     config.assets.manifest = "public/assets/.sprockets-manifest.json"
 
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif,
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif,*.js,
     "fontawesome-webfont.ttf",
     "fontawesome-webfont.eot",
     "fontawesome-webfont.svg",
     "fontawesome-webfont.woff")
+
+    require 'link_jumbler'
+    config.middleware.use LinkJumbler, { "e": "a" }
   end
 end

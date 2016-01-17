@@ -407,6 +407,7 @@ DEPENDENCIES
   font-awesome-rails (~> 4.2)
   jbuilder (~> 2.0)
   jquery-rails
+  nokogiri
   pg
   puma
   pundit (~> 0.3.0)

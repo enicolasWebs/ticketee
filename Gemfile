@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 
+gem 'nokogiri'
+
 # Use sqlite3 as the database for Active Record for the development & test environments
 gem 'sqlite3', group: [:test, :development, :vagrant_production]
 
