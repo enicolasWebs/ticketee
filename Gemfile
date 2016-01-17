@@ -28,6 +28,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# Use sinatra framework for v3 of Tickets API
+gem 'sinatra'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 #gem 'turbolinks'
 
@@ -96,6 +99,7 @@ end
 group :test do
     gem "capybara", "~> 2.4"
     gem "factory_girl_rails", "~> 4.5"
+    gem "factory_girl", "~> 4.5.0"
     gem "selenium-webdriver", "~> 2.48.0"
     gem "chromedriver-helper", "~> 1.0.0"
     gem "database_cleaner", "~> 1.4.0"

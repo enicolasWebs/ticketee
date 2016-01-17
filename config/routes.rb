@@ -1,4 +1,8 @@
+require 'heartbeat/application'
+
 Rails.application.routes.draw do
+
+  mount Heartbeat::Application, at: "/heartbeat"
 
   namespace :admin do
     root 'base#index'
@@ -10,6 +14,15 @@ Rails.application.routes.draw do
             get :make_default
         end
     end
+  end
+
+  namespace :api do
+      namespace :v3 do
+          namespace :json do
+              mount Api::V3::JSON::Tickets,
+                  at: "/projects/:project_id/tickets"
+          end
+      end
   end
 
   devise_for :users, controllers: {
