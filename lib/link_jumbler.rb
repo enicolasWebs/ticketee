@@ -1,5 +1,4 @@
 require 'nokogiri'
-require 'pp'
 
 class LinkJumbler
     def initialize(app, letters)
