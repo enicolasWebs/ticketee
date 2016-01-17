@@ -1,4 +1,5 @@
 require 'nokogiri'
+require 'pp'
 
 class LinkJumbler
     def initialize(app, letters)
@@ -16,7 +17,9 @@ class LinkJumbler
                     a.content = a.content.gsub(find.to_s, replace.to_s)
                 end
             end
-            [status, headers, [@body.to_s]]
+
+            @str = @sbody.to_s.encode!("UTF-8")
+            [status, headers, [@str]]
         end
         [status, headers, response]
     end
