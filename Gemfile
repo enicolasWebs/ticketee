@@ -6,6 +6,8 @@ gem 'rails', '4.2.5'
 
 gem 'rails-html-sanitizer'
 
+gem "active_model_serializers", "=0.8.1"
+
 gem 'nokogiri'
 
 # Use sqlite3 as the database for Active Record for the development & test environments
