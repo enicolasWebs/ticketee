@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+    before_create :generate_token
     has_many :roles
 
     # Include default devise modules. Others available are:
@@ -13,4 +14,9 @@ class User < ActiveRecord::Base
     def role_on(project)
         roles.find_by(project_id: project).try(:name)
     end
+
+    private
+        def generate_token
+            self.token = SecureRandom.uuid
+        end
 end

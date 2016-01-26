@@ -25,6 +25,10 @@ Rails.application.routes.draw do
       end
   end
 
+  namespace :api do
+      resources :tickets
+  end
+
   devise_for :users, controllers: {
       sessions: 'user/sessions'
     }
