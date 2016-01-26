@@ -6,7 +6,7 @@ gem 'rails', '4.2.5'
 
 gem 'rails-html-sanitizer'
 
-gem "active_model_serializers", "=0.8.1"
+gem "active_model_serializers"
 
 gem 'nokogiri'
 
